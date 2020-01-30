@@ -22,11 +22,12 @@ html{
 }
 
 body{
+    height:100%;
+    width: 100%;
     background: linear-gradient(0deg, rgba(245,230,198,0.65) 0%, rgba(255,255,255,0) 100%), 
     url(img/background.png);
     font-family: PTSans, 'Comic Sans MS', cursive;
     position: relative;
-    /* padding: .5em; */
     text-align: center;
     /* vertical-align: middle; */
     /* height: 11vmin; */
@@ -37,9 +38,12 @@ h1, h2 {
 }
 
 .container{
+    height:100%;
+    width: 100%;
     max-width: 1170px;
     margin: 0px auto;
     position: relative;
+    padding: 0px 15px;
 }
 
 .list-grid { 
@@ -50,21 +54,18 @@ h1, h2 {
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    /* margin-left: 24px; */
-    /* margin-right: 24px; */
     }
 .list-grid > div {
     position: relative;
-    /* padding: .5em; */
     text-align: center;
     height: 589px;
-    width: 370px;
+    max-width: 370px;
     background-color: white;
 }
 
 @media (max-width:1200px){
     .container{
-        max-width: 1200px;
+        max-width: 1170px;
     }
     .list-grid{
         grid-template-rows: repeat(1, 1fr);
@@ -74,7 +75,7 @@ h1, h2 {
 
 @media (max-width:991px){
     .container{
-        max-width: 800px;
+        max-width: 770px;
     }
     .list-grid{
         grid-template-rows: repeat(2, 1fr);
@@ -84,7 +85,7 @@ h1, h2 {
 
 @media (max-width:767px){
     .container{
-        max-width: none;
+        max-width: 370px;
     }
     .list-grid{
         grid-template-rows: repeat(3, 1fr);
