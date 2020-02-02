@@ -23,16 +23,36 @@ $(document).ready(function(){
         }
     }
 
-
-
-
-
-    $(".card").click(function() {
-        console.log("clicked card")
-
+    var bookedRoom
+    $(".buttonActive").click(function(){
+        bookedRoom = $(this).parent().parent(".card")
+    })
+    $(".card").on({
+        mouseleave: function (){
+            $(bookedRoom).addClass("cardDisabled")
+            bookedRoom = null
+        }
     })
 
+    // $(".card cardDisabled").click(function(){
+    //     console.log("disabled")
+    //     console.log($(this))
+    //     $(this).removeClass("cardDisabled")
+    // })
+    
+    // $(".card").removeClass("cardDisabled")
 
+
+    // $(".card").click(function() {
+    //     console.log("clicked card")
+    //     $(this).removeClass("cardDisabled")
+    // })
+
+
+    // $(".cardDisabled").click(function() {
+    //     console.log("clicked cardDisabled")
+    //     $(this).removeClass("cardDisabled")
+    // })
 
 
 
