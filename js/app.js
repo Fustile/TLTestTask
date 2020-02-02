@@ -10,7 +10,7 @@ $(document).ready(function(){
             ShrinkH2()
         }
         else {
-            $(".list-grid").find("h2").css('font-size', '30px')
+            $(".cardTitle").css('font-size', '30px')
         }
 
     })
@@ -19,7 +19,7 @@ $(document).ready(function(){
         if ( $(".card1").width() == $(".card2").width() && $(".card2").width() == $(".card3").width())
             return
         else {
-            $(".list-grid").find("h2").css('font-size', '25px')
+            $(".cardTitle").css('font-size', '25px')
         }
     }
 
