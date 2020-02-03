@@ -1,16 +1,16 @@
-*, *:after, *:before {
+*, *:after, *:before{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     transition: .5s ease-in-out;
 }
 
-@font-face {
+@font-face{
     font-family: NotoSerif;
     src: url(fonts/NotoSerifRegular.ttf);
 }
 
-@font-face {
+@font-face{
     font-family: PTSans;
     src: url(fonts/PTSansRegular.ttf);
 }
@@ -20,7 +20,7 @@ html{
     width: 100%;
 }
 
-body{
+.body{
     height:100%;
     width: 100%;
     background: linear-gradient(0deg, rgba(245,230,198,0.65) 0%, rgba(255,255,255,0) 100%), 
@@ -31,19 +31,12 @@ body{
     text-align: center;
 }
 
-h1{
+.mainTitle{
     font-weight: normal;
     font-family: NotoSerif, 'Comic Sans MS', cursive;
     font-size: 40px;
     color: #70563d;
     text-transform: uppercase;
-    line-height: 1.2;
-}
-h2{
-    font-weight: normal;
-    font-family: NotoSerif, 'Comic Sans MS', cursive;
-    font-size: 30px;
-    color: #70563d;
     line-height: 1.2;
 }
 
@@ -88,6 +81,11 @@ h2{
     padding: 15px;
 }
 .cardTitle{
+    font-weight: normal;
+    font-family: NotoSerif, 'Comic Sans MS', cursive;
+    font-size: 30px;
+    color: #70563d;
+    line-height: 1.2;
     height: 104px;
     width: 100%
 }
@@ -158,13 +156,55 @@ h2{
     visibility: visible;
 }
 
-.cardButton:hover{
+.buttonActive:hover{
     background-color: #9e8555
 }
 
 .cardDisabled{
     cursor: pointer;
     border-color: #d8d8d8;
+}
+
+.imageDisabled{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%) contrast(45%) brightness(1.58);
+}
+
+.cardInfoDisabled{
+    border-color: #d8d8d8;
+}
+
+.cardTitleDisabled{
+    color: #909090;
+}
+
+.cardInfoTextDisabled{
+    color: #bcbcbc
+}
+
+.cardPriceDisabled{
+    border-color: #d8d8d8;
+}
+
+.cardPriceTextDisabled{
+    color: #909090;
+    border-top: 1px solid #909090;
+}
+
+.priceDisabled{
+    color: #909090;
+}
+
+.cardButtonDisabled{
+    background-color: #bcbcbc;
+}
+
+.buttonTextDisabled{
+    display: none;    
+    font-size: 16px;
+    font-family: PTSans;
+    color: #ffffff;
+    line-height: 1.5;
 }
 
 .container{
