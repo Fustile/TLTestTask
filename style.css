@@ -241,6 +241,7 @@ html{
     height: 589px;
     max-width: 370px;
     background-color: white;
+    word-wrap: break-word;
 }
 
 .card1{
