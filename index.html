@@ -7,67 +7,69 @@
     <title>Номера и цены</title>
 </head>
 <body class="body">
-
     <div class="container">
-        
-        <div class="grid_container">
-
-            <h1 class="main_title">НОМЕРА И ЦЕНЫ</h1>
-
-            <div class="grid">
-                <div class="card card_1">
-                    <img class="card__image" src="img/card1.png" alt="Представительский люкс" >
-                    <div class="card__info">
-                        <h2 class="card__title">Представительский люкс</h2>
-                        <p class="info__text">Эксклюзивный номер с панорамным видом на центр города Москвы</p>
-                    </div>
-                    <div class="card__price">
-                        <p  class="price__text">от
-                            <span class="price"> 7900 </span>руб./сутки
-                        </p>
-                        <button class="price__button button_active">
-                            <span class="button__text">Забронировать</span>
-                            <span class="button__text_disabled">Подробнее</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="card card_2">
-                    <div class="motivator">
-                        <span class="motivator__text"> Лучшая цена</span>
-                    </div>
-                    <img class="card__image" src="img/card2.png" alt="Дуплекс" >
-                    <div class="card__info">
-                        <h2 class="card__title">Дуплекс</h2>
-                        <p class="info__text">Просторный двухкомнатный номер с шикарным видом на парк</p>
-                    </div>
-                    <div class="card__price">
-                        <p class="price__text">от
-                            <span class="price"> 5700 </span>руб./сутки
-                        </p>
-                        <button class="price__button button_active">
-                            <span class="button__text">Забронировать</span>
-                            <span class="button__text_disabled">Подробнее</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="card card_3">
-                    <img class="card__image" src="img/card3.png" alt="Бизнес-люкс" >
-                    <div class="card__info">
-                        <h2 class="card__title">Бизнес-люкс</h2>
-                        <p class="info__text">Трехкомнатный номер с панорамным видом на Москва-реку</p>
-                    </div>
-                    <div class="card__price">
-                        <p class="price__text">от
-                            <span class="price"> 4900 </span>руб./сутки
-                        </p>
-                        <button class="price__button button_active">
-                            <span class="button__text">Забронировать</span>
-                            <span class="button__text_disabled">Подробнее</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <main class="grid_container">
+                <h1 class="main__title">Номера и цены</h1>
+                <ul class="grid" type="none">
+                    <section>
+                        <li class="card card_1">
+                            <img class="card__image" src="img/card1.png" width="100%" height="230" alt="Представительский люкс" >
+                            <div class="card__info">
+                                <h2 class="card__title">Представительский люкс</h2>
+                                <p class="info__text">Эксклюзивный номер с панорамным видом на центр города Москвы</p>
+                            </div>
+                            <div class="card__price">
+                                <p  class="price__text">от
+                                    <span class="price"> 7900 </span>руб./сутки
+                                </p>
+                                <button class="price__button button_active">
+                                    <span class="button__text">Забронировать</span>
+                                    <span class="button__text--disabled">Подробнее</span>
+                                </button>
+                            </div>
+                        </li>
+                    </section>
+                    <section>
+                        <li class="card card_2">
+                            <div class="motivator">
+                                <span class="motivator__text"> Лучшая цена</span>
+                            </div>
+                            <img class="card__image" src="img/card2.png" width="100%" height="230" alt="Дуплекс" >
+                            <div class="card__info">
+                                <h2 class="card__title">Дуплекс</h2>
+                                <p class="info__text">Просторный двухкомнатный номер с шикарным видом на парк</p>
+                            </div>
+                            <div class="card__price">
+                                <p class="price__text">от
+                                    <span class="price"> 5700 </span>руб./сутки
+                                </p>
+                                <button class="price__button button_active">
+                                    <span class="button__text">Забронировать</span>
+                                    <span class="button__text--disabled">Подробнее</span>
+                                </button>
+                            </div>
+                        </li>
+                    </section>
+                    <section>
+                        <li class="card card_3">
+                            <img class="card__image" src="img/card3.png" width="100%" height="230" alt="Бизнес-люкс" >
+                            <div class="card__info">
+                                <h2 class="card__title">Бизнес-люкс</h2>
+                                <p class="info__text">Трехкомнатный номер с панорамным видом на Москва-реку</p>
+                            </div>
+                            <div class="card__price">
+                                <p class="price__text">от
+                                    <span class="price"> 4900 </span>руб./сутки
+                                </p>
+                                <button class="price__button button_active">
+                                    <span class="button__text">Забронировать</span>
+                                    <span class="button__text--disabled">Подробнее</span>
+                                </button>
+                            </div>
+                        </li>
+                    </section>
+                </ul>
+            </main>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/app.js"></script>
