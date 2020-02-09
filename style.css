@@ -25,8 +25,12 @@
 }
 
 html {
-    height:100%;
+    min-height:100%;
     width: 100%;
+}
+
+section {
+    display: inline-block;
 }
 
 .body {
@@ -48,11 +52,6 @@ html {
     line-height: 1.2;
 }
 
-/* .card__image {
-    width: 100%;
-    height: 230px;
-} */
-
 .motivator {
     position: absolute;
     height: 62px;
@@ -60,6 +59,8 @@ html {
     background-image: url(img/motivator.png);
     margin: 10px; 
     visibility: hidden;
+    transition: 0s ease-in-out;
+
 }
 
 .motivator__text {
@@ -75,6 +76,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: hidden;
+    transition: 0s ease-in-out;
 }
 
 .card__info {
@@ -105,7 +107,7 @@ html {
 }
 
 .card__price {
-    min-height: 179px;
+    min-height: 180px;
     width: 100%;
     font-size: 20px;
     font-family: NotoSerif, 'Comic Sans MS', cursive;
@@ -118,6 +120,7 @@ html {
 }
 
 .price__text {
+    display: inherit;
     min-height: 79px;
     padding-top: 30px;
     border-top: 1px solid #dbdbdb;
@@ -159,15 +162,15 @@ html {
     border-bottom: 0px solid #e7e0d3;
 }
 
-.card:hover .motivator {
+.card--active:hover .motivator {
     visibility: visible;
 }
 
-.card:hover .motivator__text {
+.card--active:hover .motivator__text {
     visibility: visible;
 }
 
-.button_active:hover {
+.button-active:hover {
     background-color: #9e8555
 }
 
@@ -176,36 +179,32 @@ html {
     border-color: #d8d8d8;
 }
 
-.image--disabled {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%) contrast(45%) brightness(1.58);
-}
 
-.card__info--disabled {
+.card__info.disabled {
     border-color: #d8d8d8;
 }
 
-.card__title--disabled {
+.card__title.disabled {
     color: #909090;
 }
 
-.info__text--disabled {
+.info__text.disabled {
     color: #bcbcbc
 }
 
-.card__price--disabled {
+.card__price.disabled {
     border-color: #d8d8d8;
 }
 
-.price__text--disabled {
+.price__text.disabled {
     color: #909090;
 }
 
-.price--disabled {
+.price.disabled {
     color: #909090;
 }
 
-.button--disabled {
+.price__button.disabled {
     background-color: #bcbcbc;
 }
 
@@ -221,102 +220,57 @@ html {
     position: relative;
     height:100%;
     width: 100%;
-    min-width: 370px;
-    max-width: 1200px;
-    min-height: 717px;
-    margin: 0px auto;
+    /* min-width: 370px;
+    max-width: 1196.56px; */
+    width: 1196.56px;
+    min-height: 746px;
+    margin: auto;
 }
 
 .grid_container {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    margin: 0px auto;
-
+    position: relative;
 }
 
 .grid {
     position: relative;
-    display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "a b c";
-    grid-gap: 30px;
     margin-top: 80px;
-    margin-left: 15px;
-    margin-right: 15px;
     }
     
 .card {
+    display: inline-block;
     position: relative;
     text-align: center;
     min-height: 589px;
-    max-width: 370px;
+    width: 370px;
     background-color: white;
     word-wrap: break-word;
-}
-
-.card_1 {
-    grid-area: a;
-    justify-self: center;
-}
-
-.card_2 {
-    grid-area: b;
-    justify-self: center;
-}
-
-.card_3 {
-    grid-area: c;
-    justify-self: center;
+    margin: 13px;
 }
 
 @media (max-width: 1200px) {
     .container {
-        max-width: 1200px;
-        min-height: 717px;
-    }
-
-    .grid {
-        grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: repeat(3, 1fr);
+        max-width: 1196.56px;
+        min-height: 746px;
     }
 }
 
 @media (max-width: 991px) {
     .container {
-        max-width: 770px;
-        min-height: 1336px;
+        width: 796.28px;
+        min-height: 1350px;
     }
-
-    .grid {
-        grid-template-rows: repeat(2, 1fr);
-        /* grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: 
-        "a a b b"
-        "c c c c"; */
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-        "a b"
-        "c c";
-        margin-left: 0px;
-        margin-right: 0px;
+    .card_3 {
+        display: block;
+        margin: auto;
     }
 }
 
 @media (max-width: 767px) {
     .container {
-        max-width: 370px;
-        min-height: 1955px;
+        width: 396px;
+        min-height: 1970px;
     }
-
-    .grid {
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-areas: 
-        "a"
-        "b"
-        "c";
+    .card {
+        display: block;
     }
 }
