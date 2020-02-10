@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    let width = $(document).width();
-    let widthHigh = 1155;
-    let widthLow = 990;
+    // let width = $(document).width();
+    // let widthHigh = 1155;
+    // let widthLow = 990;
 
     // ShrinkH2();
 
@@ -22,14 +22,14 @@ $(document).ready(function() {
 
     let bookedRoom;
     let cardNum
-    $(document).on("click", ".button-active", function() {
+    $(document).on("click", ".button--active", function() {
         bookedRoom = $(this).parent().parent(".card");
     });
     $(".card").on( {
         mouseleave: function () {
             $(bookedRoom).removeClass("card--active");
             $(bookedRoom).addClass("card--disabled");
-            $(bookedRoom).find(".price__button").removeClass("button-active")
+            $(bookedRoom).find(".price__button").removeClass("button--active")
             $(bookedRoom).find('*').addClass("disabled");
             $(bookedRoom).find(".button__text").hide();
             $(bookedRoom).find(".button__text--disabled").show();
@@ -47,7 +47,7 @@ $(document).ready(function() {
     $(document).on("click", ".card--disabled", function() {
         $(this).removeClass("card--disabled");
         $(this).addClass("card--active");
-        $(this).find(".price__button").addClass("button-active")
+        $(this).find(".price__button").addClass("button--active")
         $(this).find('*').removeClass("disabled");
         $(this).find(".button__text--disabled").hide();
         $(this).find(".button__text").show();

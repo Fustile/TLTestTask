@@ -25,7 +25,7 @@
 }
 
 html {
-    min-height:100%;
+    height:100%;
     width: 100%;
 }
 
@@ -43,7 +43,7 @@ section {
     text-align: center;
 }
 
-.main__title {
+.main-title {
     font-weight: normal;
     font-family: NotoSerif, 'Comic Sans MS', cursive;
     font-size: 40px;
@@ -128,7 +128,7 @@ section {
     margin-right: 30px;
 }
 
-.price {
+.price__amount {
     font-size: 26px;
     color: #70563d;
 }
@@ -170,7 +170,7 @@ section {
     visibility: visible;
 }
 
-.button-active:hover {
+.button--active:hover {
     background-color: #9e8555
 }
 
@@ -200,7 +200,7 @@ section {
     color: #909090;
 }
 
-.price.disabled {
+.price__amount.disabled {
     color: #909090;
 }
 
@@ -217,17 +217,17 @@ section {
 }
 
 .container {
+    display: table;
     position: relative;
     height:100%;
-    width: 100%;
-    /* min-width: 370px;
-    max-width: 1196.56px; */
-    width: 1196.56px;
+    width: 1197px;
     min-height: 746px;
     margin: auto;
 }
 
-.grid_container {
+.rooms-container {
+    display: table-cell;
+    vertical-align: middle;
     position: relative;
 }
 
@@ -249,19 +249,18 @@ section {
 
 @media (max-width: 1200px) {
     .container {
-        max-width: 1196.56px;
+        width: 1197px;
         min-height: 746px;
     }
 }
 
 @media (max-width: 991px) {
     .container {
-        width: 796.28px;
+        width: 797px;
         min-height: 1350px;
     }
-    .card_3 {
+    .card-3 {
         display: block;
-        margin: auto;
     }
 }
 
