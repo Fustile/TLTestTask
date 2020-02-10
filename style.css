@@ -121,14 +121,15 @@ section {
 
 .price__text {
     display: inherit;
-    min-height: 79px;
     padding-top: 30px;
+    padding-bottom: 15px;
     border-top: 1px solid #dbdbdb;
     margin-left: 30px;
     margin-right: 30px;
 }
 
 .price__amount {
+    background-color: inherit;
     font-size: 26px;
     color: #70563d;
 }
@@ -152,14 +153,14 @@ section {
 }
 
 .card:hover .card__info {
-    border-left: 0px solid #e7e0d3;
-    border-right: 0px solid #e7e0d3;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
 }
 
 .card:hover .card__price {
-    border-left: 0px solid #e7e0d3;
-    border-right: 0px solid #e7e0d3;
-    border-bottom: 0px solid #e7e0d3;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 .card--active:hover .motivator {
@@ -231,9 +232,10 @@ section {
     position: relative;
 }
 
-.grid {
+.rooms {
     position: relative;
     margin-top: 80px;
+    list-style-type: none;
     }
     
 .card {
