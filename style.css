@@ -98,7 +98,7 @@ section {
     color: #70563d;
     line-height: 1.2;
     min-height: 104px;
-    width: 100%
+    width: 100%;
 }
 
 .info__text {
@@ -236,13 +236,16 @@ section {
     position: relative;
     margin-top: 80px;
     list-style-type: none;
+    min-height: 616px;
+    overflow: hidden;
     }
     
 .card {
     display: inline-block;
     position: relative;
     text-align: center;
-    min-height: 589px;
+    vertical-align: top;
+    min-height: 580px;
     width: 370px;
     background-color: white;
     word-wrap: break-word;

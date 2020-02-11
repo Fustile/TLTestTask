@@ -4,7 +4,7 @@ $(document).ready(function() {
     let cardNum;
 
     $(document).on("click", ".button--active", function() {
-        bookedRoom = $(this).parent().parent(".card");
+        bookedRoom = $(this).parent().parent().parent(".card");
     });
 
     $(".card").mouseleave(function () {
@@ -40,7 +40,7 @@ $(document).ready(function() {
     }
     
     function ImgDisable (bookedRoom) {
-        cardNum = $(bookedRoom).parent().index();
+        cardNum = $(bookedRoom).index();
         cardNum++;
         if (cardNum > 0) {
             $(bookedRoom).find(".card__image").attr("src","img/disabled/card" + cardNum +".png");
@@ -48,7 +48,7 @@ $(document).ready(function() {
     }
     
     function ImgEnable (card) {
-        cardNum = $(card).parent().index();
+        cardNum = $(card).index();
         cardNum++;
         if (cardNum > 0) {
             $(card).find(".card__image").attr("src","img/card" + cardNum +".png");
