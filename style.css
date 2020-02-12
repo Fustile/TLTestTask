@@ -223,7 +223,6 @@ section {
     position: relative;
     height:100%;
     width: 1197px;
-    min-height: 746px;
     margin: auto;
 }
 
@@ -237,7 +236,6 @@ section {
     display: flex;
     position: relative;
     list-style-type: none;
-    min-height: 616px;
     overflow: hidden;
     flex-direction: row;
     flex-wrap: wrap;
@@ -248,7 +246,6 @@ section {
     position: relative;
     text-align: center;
     vertical-align: top;
-    min-height: 580px;
     max-width: 370px;
     background-color: white;
     word-wrap: break-word;
@@ -259,20 +256,17 @@ section {
 @media (max-width: 1200px) {
     .container {
         width: 1197px;
-        min-height: 746px;
     }
 }
 
 @media (max-width: 991px) {
     .container {
         width: 797px;
-        min-height: 1350px;
     }
 }
 
 @media (max-width: 767px) {
     .container {
         width: 396px;
-        min-height: 1970px;
     }
 }
