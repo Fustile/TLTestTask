@@ -30,7 +30,9 @@ html {
 }
 
 section {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .body {
@@ -50,6 +52,7 @@ section {
     color: #70563d;
     text-transform: uppercase;
     line-height: 1.2;
+    margin-bottom: 80px;
 }
 
 .motivator {
@@ -80,15 +83,14 @@ section {
 }
 
 .card__info {
-    min-height: 180px;
     width: 100%;
-    margin-top: -5px;
     font-size: 16px;
     color: #1e1e1e;
     line-height: 1.5;
     border-left: 5px solid #e7e0d3;
     border-right: 5px solid #e7e0d3;
     padding: 15px;
+    flex: 1;
 }
 
 .card__title {
@@ -97,17 +99,16 @@ section {
     font-size: 30px;
     color: #70563d;
     line-height: 1.2;
-    min-height: 104px;
+    min-height: 100px;
     width: 100%;
 }
 
 .info__text {
-    max-width: 330px;
     margin: auto;
 }
 
 .card__price {
-    min-height: 180px;
+    height: 172px;
     width: 100%;
     font-size: 20px;
     font-family: NotoSerif, 'Comic Sans MS', cursive;
@@ -233,23 +234,26 @@ section {
 }
 
 .rooms {
+    display: flex;
     position: relative;
-    margin-top: 80px;
     list-style-type: none;
     min-height: 616px;
     overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     }
     
 .card {
-    display: inline-block;
     position: relative;
     text-align: center;
     vertical-align: top;
     min-height: 580px;
-    width: 370px;
+    max-width: 370px;
     background-color: white;
     word-wrap: break-word;
     margin: 13px;
+    flex: 1;
 }
 
 @media (max-width: 1200px) {
@@ -264,17 +268,11 @@ section {
         width: 797px;
         min-height: 1350px;
     }
-    .card-3 {
-        display: block;
-    }
 }
 
 @media (max-width: 767px) {
     .container {
         width: 396px;
         min-height: 1970px;
-    }
-    .card {
-        display: block;
     }
 }

@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     let bookedRoom = null;
-    let cardNum;
 
     $(document).on("click", ".button--active", function() {
         bookedRoom = $(this).parent().parent().parent(".card");
@@ -40,18 +39,12 @@ $(document).ready(function() {
     }
     
     function ImgDisable (bookedRoom) {
-        cardNum = $(bookedRoom).index();
-        cardNum++;
-        if (cardNum > 0) {
-            $(bookedRoom).find(".card__image").attr("src","img/disabled/card" + cardNum +".png");
-        }
+        let imgSrc = $(bookedRoom).find("img.card__image").attr("src").split('/')
+        $(bookedRoom).find(".card__image").attr("src", imgSrc[0] + "/disabled/" + imgSrc[1]);
     }
-    
+
     function ImgEnable (card) {
-        cardNum = $(card).index();
-        cardNum++;
-        if (cardNum > 0) {
-            $(card).find(".card__image").attr("src","img/card" + cardNum +".png");
-        }
+        let imgSrc = $(card).find("img.card__image").attr("src").split('/')
+        $(card).find(".card__image").attr("src",imgSrc[0] + "/" + imgSrc[2]);
     }
 });
