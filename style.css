@@ -108,7 +108,7 @@ section {
 }
 
 .card__price {
-    height: 172px;
+    min-height: 172px;
     width: 100%;
     font-size: 20px;
     font-family: NotoSerif, 'Comic Sans MS', cursive;
